@@ -1,0 +1,15 @@
+.Sidebar {
+  width: 25%;
+  max-width: 200px;
+  min-width: 250px;
+  background-color: var(--color-primary);
+}
+
+.Sidebar__logo {
+  padding: 50px 20px;
+  text-align: center;
+
+  img {
+    width: 100px;
+  }
+}
