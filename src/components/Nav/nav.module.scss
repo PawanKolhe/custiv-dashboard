@@ -1,7 +1,41 @@
-.Nav {
-
-}
-
 .Nav__item {
-  font-weight: 700;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 15px 20px 15px 30px;
+  border-left: 5px solid transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+  transition: color 0.3s ease;
+
+  &Icon {
+    font-size: 1.6rem;
+    margin-right: 15px;
+  }
+
+  .Nav__itemIconInactive {
+    display: inline;
+  }
+  .Nav__itemIconActive {
+    display: none;
+  }
+
+  &Active {
+    color: white;
+    border-left: 5px solid var(--color-secondary);
+    font-weight: 600;
+    background: linear-gradient(90deg, rgba(85,93,255,0.25) 0%, rgba(85,93,255,0) 100%);
+    transition: font-weight 0.3s ease;
+
+    .Nav__itemIconInactive {
+      display: none;
+    }
+    .Nav__itemIconActive {
+      display: inline;
+    }
+  }
 }
