@@ -1,0 +1,58 @@
+.InfoBox {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  padding: 25px;
+  width: 100%;
+
+  &.blue {
+    background-color: var(--color-blue-light-2);
+  }
+  &.orange {
+    background-color: var(--color-orange-light-2);
+  }
+  &.green {
+    background-color: var(--color-green-light-2);
+  }
+}
+
+.InfoBox__icon {
+  font-size: 2.8rem;
+  margin-right: 10px;
+}
+
+.InfoBox{
+  &.blue {
+    .InfoBox__icon {
+      color: var(--color-blue);
+    }
+  }
+  &.orange {
+    .InfoBox__icon {
+      color: var(--color-orange);
+    }
+  }
+  &.green {
+    .InfoBox__icon {
+      color: var(--color-green);
+    }
+  }
+}
+
+.InfoBox__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.InfoBox__value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.InfoBox__text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+}
