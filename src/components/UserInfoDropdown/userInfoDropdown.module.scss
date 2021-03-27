@@ -1,8 +1,13 @@
 .UserInfo {
   display: flex;
   flex-direction: row;
-  align-items: center;
   cursor: pointer;
+}
+
+.UserInfo__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .UserInfo__image {
@@ -56,4 +61,13 @@
   font-size: 0.6rem;
   font-weight: 500;
   opacity: 0.5;
+}
+
+.UserInfo__icon {
+  color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  font-size: 0.8rem;
 }
