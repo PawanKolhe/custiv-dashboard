@@ -1,15 +1,26 @@
+@import "mixins";
+
+$color-primary: #141646;
+$color-secondary: #555dff;
+
 :root {
-  --color-primary: rgb(20, 22, 70);
-  --color-secondary: rgb(85, 93, 255);
+  --color-primary: #{$color-primary};
+  --color-primary-light: #5b5c8a;
 
-  --color-green: rgb(11, 194, 129);
-  --color-green-light: rgb(202, 247, 231);
-  
-  --color-orange: rgb(255, 140, 4);
-  --color-orange-light: rgb(255, 238, 218);
+  --color-secondary: #{$color-secondary};
+  --color-secondary-light: #{lighten($color-secondary, 2)};
 
-  --color-blue: rgb(0, 177, 237);
-  --color-blue-light: rgb(213, 246, 255);
+  --color-green: #0bc281;
+  --color-green-light: #caf7e7;
+  --color-green-light-2: #eafff7;
 
-  --color-grey: rgb(221, 221, 231);
+  --color-orange: #ff8c04;
+  --color-orange-light: #ffeeda;
+  --color-orange-light-2: #fff6ea;
+
+  --color-blue: #00b1ed;
+  --color-blue-light: #d5f6ff;
+  --color-blue-light-2: #ecfbff;
+
+  --color-border: #dddde7;
 }
