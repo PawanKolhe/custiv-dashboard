@@ -1,0 +1,28 @@
+.Button {
+  padding: 12px 24px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 600;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
+}
+
+.Button__primary {
+  color: white;
+  background-color: var(--color-secondary);
+
+  &:hover {
+    background-color: var(--color-secondary-light);
+  }
+}
+
+.Button__icon {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
