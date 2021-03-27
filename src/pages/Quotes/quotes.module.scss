@@ -60,6 +60,12 @@
   gap: 10px;
 }
 
+@media (max-width: 745px) {
+  .flexHorizontal {
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 512px) {
   .flexHorizontal {
     flex-direction: column;

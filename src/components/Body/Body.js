@@ -13,9 +13,6 @@ export default function Body() {
       <Header />
 
       <Switch>
-        <Route exact path="/">
-          <Redirect to="/quotes" />
-        </Route>
         <Route exact path="/quotes">
           <Quotes />
         </Route>
@@ -30,6 +27,9 @@ export default function Body() {
         </Route>
         <Route exact path="/clients">
           <Clients />
+        </Route>
+        <Route path="/">
+          <Redirect to="/quotes" />
         </Route>
       </Switch>
     </div>
