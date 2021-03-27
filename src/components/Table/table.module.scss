@@ -1,0 +1,59 @@
+.Table__container {
+  width: 100%;
+  overflow-x: auto;
+  box-shadow: var(--box-shadow);
+}
+
+.Table {
+  border-radius: 5px;
+  border-collapse: collapse;
+  overflow: hidden;
+  width: 100%;
+}
+
+.Table__header {
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+  }
+}
+
+.Table__headerItem {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 16px 24px;
+  color: var(--color-primary-light);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.Table__body {
+  padding-left: 24px;
+  padding-right: 24px;
+  border-left: 48px solid white;
+  border-right: 48px solid white;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.Table__row {
+  .Table__rowItem:first-child {
+    padding-left: 0;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .Table__rowItem:last-child {
+    padding-right: 24px;
+  }
+}
+
+.Table__rowItem {
+  padding: 16px 0;
+  padding-left: 24px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-primary-light);
+  white-space: nowrap;
+  font-weight: 500;
+}

@@ -8,29 +8,36 @@
     'quotes-table quotes-table quotes-table quotes-table quotes-table quotes-table'
 }
 
-.gridRow {
+.recentActivityContent {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-@media (max-width: 945px) {
+.recentQuotesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 1200px) {
   .GridSection {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      'recent-activity recent-activity recent-activity recent-activity recent-quotes recent-quotes'
-      'quotes-table quotes-table quotes-table quotes-table quotes-table quotes-table'
+      'recent-activity recent-quotes'
+      'quotes-table quotes-table'
   }
 }
 
 @media (max-width: 945px) {
   .GridSection {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      'recent-activity recent-activity recent-activity recent-activity recent-quotes recent-quotes'
-      'quotes-table quotes-table quotes-table quotes-table quotes-table quotes-table'
+      'recent-activity recent-activity'
+      'recent-quotes recent-quotes'
+      'quotes-table quotes-table'
   }
 }
 

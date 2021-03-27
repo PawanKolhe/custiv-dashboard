@@ -12,6 +12,8 @@
     "react-router-dom": "^5.2.0",
     "react-router-transition": "github:finnmerlett/react-router-transition#build",
     "react-scripts": "4.0.3",
+    "react-select": "^4.3.0",
+    "react-table": "^7.6.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
