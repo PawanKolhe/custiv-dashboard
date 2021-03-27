@@ -7,7 +7,7 @@ export default function Suppliers() {
       <PageHeader title="Suppliers" />
 
       <div className="container page-content">
-        Page
+        Suppliers
       </div>
     </div>
   )

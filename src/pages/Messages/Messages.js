@@ -7,7 +7,7 @@ export default function Messages() {
       <PageHeader title="Messages" />
 
       <div className="container page-content">
-        Page
+        Messages
       </div>
     </div>
   )

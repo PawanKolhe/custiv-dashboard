@@ -1,8 +1,9 @@
+import { forwardRef } from 'react';
 import styles from './userInfoDropdown.module.scss'
 
-export default function UserInfoDropdown({ img }) {
+const UserInfoDropdown = ({ img }, ref) => {
   return (
-    <div className={styles.UserInfo}>
+    <div className={styles.UserInfo} ref={ref}>
       <div className={styles.UserInfo__image}>
         {img ?
           <img src={img} alt="Profile" />
@@ -22,3 +23,5 @@ export default function UserInfoDropdown({ img }) {
     </div>
   )
 }
+
+export default forwardRef(UserInfoDropdown);

@@ -1,3 +1,8 @@
+.Nav {
+  display: flex;
+  flex-direction: column;
+}
+
 .Nav__item {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.5);
@@ -36,6 +41,31 @@
     }
     .Nav__itemIconActive {
       display: inline;
+    }
+  }
+}
+
+@media (max-width: 945px) {
+  .Nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .Nav__item {
+    padding: 20px;
+    border-left: none;
+    border-top: 5px solid transparent;
+
+    &Text {
+      display: none;
+    }
+
+    &Icon {
+      margin-right: 0;
+    }
+
+    &Active {
+      border-top: 5px solid var(--color-secondary);
+      background: linear-gradient(180deg, rgba(85,93,255,0.25) 0%, rgba(85,93,255,0) 100%);
     }
   }
 }

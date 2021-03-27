@@ -52,3 +52,16 @@
 .quotesTable {
   grid-area: quotes-table;
 }
+
+.flexHorizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 512px) {
+  .flexHorizontal {
+    flex-direction: column;
+  }
+}

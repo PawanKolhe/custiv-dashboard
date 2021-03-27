@@ -7,7 +7,7 @@ export default function Clients() {
       <PageHeader title="Clients" />
 
       <div className="container page-content">
-        Page
+        Clients
       </div>
     </div>
   )

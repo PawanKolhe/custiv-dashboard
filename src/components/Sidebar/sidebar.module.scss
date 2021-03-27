@@ -3,6 +3,8 @@
   max-width: 180px;
   min-width: 205px;
   background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
 }
 
 .Sidebar__logo {
@@ -11,5 +13,27 @@
 
   img {
     width: 100px;
+  }
+}
+
+@media (max-width: 945px) {
+  .Sidebar {
+    width: 100%;
+    height: 60px;
+    max-width: unset;
+    min-width: unset;
+    background-color: var(--color-primary);
+    flex-direction: row;
+  }
+  .Sidebar__logo {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 512px) {
+  .Sidebar__logo {
+    display: none;
   }
 }

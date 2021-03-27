@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'tippy.js/dist/tippy.css'
+import 'tippy.js/themes/light-border.css';
 import './styles/styles.scss';
 import App from './App';
 

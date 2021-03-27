@@ -15,3 +15,14 @@
   font-weight: 800;
   color: var(--color-primary);
 }
+
+@media (max-width: 512px) {
+  .PageHeader_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+  }
+}

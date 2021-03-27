@@ -12,11 +12,16 @@
 .Header__notification {
   position: relative;
   cursor: pointer;
+
+  &:hover .Header__notificationIcon {
+    transform: rotate(8deg);
+  }
 }
 
 .Header__notificationIcon {
   font-size: 1.6rem;
   color: var(--color-primary-light);
+  transition: transform 0.3s ease;
 }
 
 .Header__notificationDot {
@@ -29,4 +34,5 @@
   right: 0px;
   box-sizing: content-box;
   z-index: 10;
+  transition: transform 0.3s ease;
 }

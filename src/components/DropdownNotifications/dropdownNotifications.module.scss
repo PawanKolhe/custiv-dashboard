@@ -1,0 +1,20 @@
+.Notifications {
+  min-width: 250px;
+}
+
+.Notifications__header {
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.Notifications__list {
+  border-top: 1px solid var(--color-border);
+}
+
+.Notifications__noContent {
+  text-align: center;
+  color: #bbbcda;
+  padding: 20px;
+}

@@ -7,7 +7,7 @@ export default function Projects() {
       <PageHeader title="Projects" />
 
       <div className="container page-content">
-        Page
+        Projects
       </div>
     </div>
   )

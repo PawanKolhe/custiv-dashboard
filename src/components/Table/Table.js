@@ -32,7 +32,7 @@ export default function Table({ columns, data }) {
               <tr key={row.id} {...row.getRowProps()} className={styles.Table__row}>
                 {row.cells.map(cell => {
                   return (
-                    <td key={1} {...cell.getCellProps()} className={styles.Table__rowItem}>
+                    <td key={cell.id} {...cell.getCellProps()} className={styles.Table__rowItem}>
                       {cell.render('Cell')}
                     </td>
                   )

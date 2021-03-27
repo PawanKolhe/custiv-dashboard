@@ -8,6 +8,7 @@ import ListItemSolo from '../../components/ListItemSolo/ListItemSolo'
 import Table from '../../components/Table/Table'
 import Badge from '../../components/Badge/Badge'
 import Select from 'react-select'
+import Input from '../../components/Input/Input'
 
 const initialData = [
   {
@@ -61,6 +62,8 @@ const initialData = [
 ]
 
 export default function Quotes() {
+  const [searchText, setSearchText] = useState('');
+  const [searchTextChangedValue, setSearchTextChangedValue] = useState('');
   const [tableData] = useState(initialData);
 
   const showSelectOptions = [
@@ -72,7 +75,7 @@ export default function Quotes() {
 
   const [selectedShowOption, setSelectedShowOption] = useState(showSelectOptions[0]);
 
-  const data = useMemo(
+  const filteredData = useMemo(
     () => {
       let table_data = [...tableData];
       switch(selectedShowOption.value) {
@@ -86,9 +89,15 @@ export default function Quotes() {
           table_data =  table_data.filter(item => item.col6 === 'RECEIVED')
           break;
       }
-      return table_data.map(item => ({...item, col6: <Badge status={item.col6} />}));
+      table_data = table_data.map(item => ({...item, col6: <Badge status={item.col6} />}));
+      if(searchText) {
+        return table_data.filter((item) => {
+          return item.col1.toLowerCase().includes(searchText.toLowerCase());
+        });
+      }
+      return table_data;
     },
-    [selectedShowOption]
+    [selectedShowOption, searchTextChangedValue]
   )
 
   const columns = useMemo(
@@ -121,7 +130,7 @@ export default function Quotes() {
     []
   )
 
-  const customStyles = {
+  const showSelectCustomStyles = {
     container: (provided) => ({
       ...provided,
       width: '200px',
@@ -130,8 +139,14 @@ export default function Quotes() {
     }),
     singleValue: (provided) => ({
       ...provided,
-      color: 'var(--color-primary-light)'
+      color: 'var(--color-primary-light)',
+      paddingLeft: '5px'
     }),
+  }
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setSearchTextChangedValue(searchText);
   }
 
   return (
@@ -160,15 +175,26 @@ export default function Quotes() {
           </div>
 
           <div className={styles.quotesTable}>
-            <SectionHeader title="292 Total Quotes Found">
-            <Select
-              options={showSelectOptions}
-              styles={customStyles}
-              defaultValue={selectedShowOption}
-              onChange={setSelectedShowOption}
-            />
+            <SectionHeader title={`${filteredData && filteredData.length} Total Quotes Found`}>
+              <div className={styles.flexHorizontal}>
+                <form onSubmit={handleSearch} noValidate>
+                  <Input
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
+                    placeholder="Search all Quotes"
+                    icon="bx:bx-search"
+                    type="text"
+                  />
+                </form>
+                <Select
+                  options={showSelectOptions}
+                  styles={showSelectCustomStyles}
+                  defaultValue={selectedShowOption}
+                  onChange={setSelectedShowOption}
+                />
+              </div>
             </SectionHeader>
-            <Table columns={columns} data={data} />
+            <Table columns={columns} data={filteredData} />
           </div>
         </div>
       </div>

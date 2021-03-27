@@ -1,0 +1,26 @@
+.DropdownMenu__item {
+  min-width: 130px;
+  padding: 9px 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: rgb(248, 247, 255);
+  }
+}
+
+.DropdownMenu__icon {
+  font-size: 1.2rem;
+  margin-right: 7px;
+  color: var(--color-primary);
+}

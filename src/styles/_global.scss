@@ -23,6 +23,13 @@ code {
   padding-right: 40px;
 }
 
+@media (max-width: 512px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .page-content {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -42,4 +49,30 @@ code {
   flex-direction: row;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.tippy-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 945px) {
+  // Scrollbar
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cccccc;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c9c3c3;
+  }
 }
