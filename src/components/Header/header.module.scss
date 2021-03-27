@@ -1,0 +1,32 @@
+.Header {
+  padding: 30px 0 10px;
+}
+
+.Header__content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.Header__notification {
+  position: relative;
+  cursor: pointer;
+}
+
+.Header__notificationIcon {
+  font-size: 1.6rem;
+  color: var(--color-primary-light);
+}
+
+.Header__notificationDot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  right: 0px;
+  box-sizing: content-box;
+  z-index: 10;
+}
